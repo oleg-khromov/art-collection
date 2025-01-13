@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useDebounce } from "@/hooks/useDebounce";
 
 interface ApiResponse {
   page: number;
@@ -16,10 +17,12 @@ export function useInfiniteScroll(): ApiResponse {
     }
   };
 
+  const debouncedHandleScroll = useDebounce(handleScroll, 800);
+
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", debouncedHandleScroll);
+    return () => window.removeEventListener("scroll", debouncedHandleScroll);
+  }, [debouncedHandleScroll]);
 
   return { page };
 }
