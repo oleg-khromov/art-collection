@@ -1,0 +1,19 @@
+.artItem {
+  @apply text-center;
+}
+
+.artItem a {
+  @apply hover:no-underline;
+}
+
+.artItem h4 {
+  @apply text-lg font-medium mb-2 hover:underline;
+}
+
+.artItem p {
+  @apply mt-2 text-black;
+}
+
+.artItem img {
+  @apply mx-auto;
+}
