@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { headers } from "@/utils/constants";
 
 interface ApiResponse<T> {
   data: T | null;
@@ -13,13 +14,16 @@ export function useFetch<T>(url: string): ApiResponse<T> {
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
+      setError(null);
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          headers,
+        });
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`);
         }
         const result = await response.json();
-        console.log("result", result);
         setData(result);
       } catch (err: any) {
         setError(err as Error);

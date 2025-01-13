@@ -1,4 +1,5 @@
-import { ArtObjectsList, LinkBack } from "@/components";
+import { ArtObjectsList } from "@/components";
+import { LinkBack } from "@/components/ui";
 
 export default function CollectionPage() {
   return (

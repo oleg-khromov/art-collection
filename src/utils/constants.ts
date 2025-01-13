@@ -1,14 +1,15 @@
-import dotenv from "dotenv";
-
-dotenv.config();
-
 export const BASE_LANGUAGE = "nl";
 
-export const API_ROUTES = {
+export const ROUTES = {
   COLLECTION: "collection",
 };
-console.log(process.env.API_URL);
 
-export const API_BASE_URL = `${process.env.API_URL}/${BASE_LANGUAGE}/${API_ROUTES.COLLECTION}`;
+export const BASE_URL = `${process.env.NEXT_PUBLIC_API_URL}/${BASE_LANGUAGE}/${ROUTES.COLLECTION}`;
 
-export const API_STR_KEY = `key=${process.env.API_KEY}`;
+export const PARAM_KEY = `key=${process.env.NEXT_PUBLIC_API_KEY}`;
+
+export const headers = {
+  Accept: "*/*",
+  "Accept-Profile": "*",
+  "Content-Type": "application/json",
+};

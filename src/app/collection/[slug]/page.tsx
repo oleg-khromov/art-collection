@@ -1,4 +1,5 @@
-import { ArtObjectDetails, LinkBack } from "@/components";
+import { ArtObjectDetails } from "@/components";
+import { LinkBack } from "@/components/ui";
 
 export default function ArtObjectPage() {
   return (
