@@ -15,5 +15,5 @@
 }
 
 .artItem img {
-  @apply mx-auto;
+  @apply mx-auto mb-3;
 }

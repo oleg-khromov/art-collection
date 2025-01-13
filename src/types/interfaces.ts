@@ -2,7 +2,10 @@ export interface IArtObject {
   id: string;
   objectNumber: string;
   title: string;
-  links: any;
+  links: {
+    self: string;
+    web: string;
+  };
   hasImage: boolean;
   principalOrFirstMaker: string;
   longTitle: string;

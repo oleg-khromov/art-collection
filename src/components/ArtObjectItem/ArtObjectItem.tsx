@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import { Picture } from "@/components/ui";
 import { IArtObject } from "@/types/interfaces";
-import styles from "./artObjectItem.module.css";
+import styles from "./ArtObjectItem.module.css";
 
 export default function ArtObjectItem({ obj }: { obj: IArtObject }) {
   return (
     <article className={styles.artItem}>
       <a href={`/collection/${obj.objectNumber}`}>
-        <Image
+        <Picture
           src={obj.webImage.url}
           alt={obj.longTitle}
           width={180}
@@ -17,7 +17,6 @@ export default function ArtObjectItem({ obj }: { obj: IArtObject }) {
             width: "auto",
             height: "180px",
           }}
-          priority
         />
         <h4>{obj.title}</h4>
         <p>{obj.objectNumber}</p>

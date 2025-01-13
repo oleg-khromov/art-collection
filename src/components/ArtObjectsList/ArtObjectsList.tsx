@@ -4,9 +4,10 @@ import { ArtObjectItem } from "@/components";
 import { useFetch } from "@/hooks";
 import { IArtCollection, IArtObject } from "@/types/interfaces";
 import { API_BASE_URL, API_STR_KEY } from "@/utils/constants";
-import styles from "./artObjectsList.module.css";
+import styles from "./ArtObjectsList.module.css";
 
 export default function ArtObjectList() {
+  console.log(API_BASE_URL, API_STR_KEY);
   const { data, isLoading, error } = useFetch<IArtCollection>(
     `https://www.rijksmuseum.nl/api/nl/collection?key=1rbD8jnK`
   );
@@ -23,7 +24,7 @@ export default function ArtObjectList() {
     <section className={styles.artList}>
       {data &&
         data.artObjects.map((obj: IArtObject) => (
-          <ArtObjectItem obj={obj} key={obj.objectNumber} />
+          <ArtObjectItem key={obj.objectNumber} obj={obj} />
         ))}
     </section>
   );

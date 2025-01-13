@@ -21,10 +21,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  @apply text-2xl font-semibold mb-8;
+}
+
 a {
   @apply text-primaryColor no-underline hover:underline;
 }
 
+p {
+  @apply pb-5;
+}
+
 .container {
-  @apply mx-auto w-full my-10;
+  @apply mx-auto w-full my-10 pl-5 pr-5;
 }

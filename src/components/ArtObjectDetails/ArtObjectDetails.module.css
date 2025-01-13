@@ -1,0 +1,3 @@
+.imgWrap {
+  @apply flex justify-center mx-auto mb-10;
+}

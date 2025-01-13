@@ -1,4 +1,6 @@
-import ArtObjectsList from "@/components/artObjectsList/artObjectsList";
-import ArtObjectItem from "@/components/artObjectItem/artObjectItem";
+import ArtObjectsList from "@/components/ArtObjectsList/ArtObjectsList";
+import ArtObjectItem from "@/components/ArtObjectItem/ArtObjectItem";
+import ArtObjectDetails from "@/components/ArtObjectDetails/ArtObjectDetails";
+import LinkBack from "@/components/LinkBack/LinkBack";
 
-export { ArtObjectsList, ArtObjectItem };
+export { ArtObjectsList, ArtObjectItem, ArtObjectDetails, LinkBack };

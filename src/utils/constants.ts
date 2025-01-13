@@ -5,8 +5,9 @@ dotenv.config();
 export const BASE_LANGUAGE = "nl";
 
 export const API_ROUTES = {
-  COLLECTION: "/collection",
+  COLLECTION: "collection",
 };
+console.log(process.env.API_URL);
 
 export const API_BASE_URL = `${process.env.API_URL}/${BASE_LANGUAGE}/${API_ROUTES.COLLECTION}`;
 
